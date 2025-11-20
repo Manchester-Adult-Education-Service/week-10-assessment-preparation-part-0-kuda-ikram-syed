@@ -43,8 +43,8 @@
 # 2. Print the tasks list to see what it looks like (it should be empty)
 #
 # Write your code below:
-
-
+tasks = []
+print(tasks)
 
 
 # -------------------------------------------
