@@ -43,8 +43,8 @@
 # 2. Print the tasks list to see what it looks like (it should be empty)
 #
 # Write your code below:
-
-
+tasks = []
+print(tasks)
 
 
 # -------------------------------------------
@@ -73,7 +73,11 @@
 #
 # Write your code below:
 
-
+print("================================")
+print("TASK MANAGER SYSTEM")
+print("Keep track of your daily tasks")
+print("================================")
+print()
 
 
 # -------------------------------------------
@@ -110,7 +114,7 @@
 #
 # Write your code below:
 
-
+ 
 
 
 # -------------------------------------------
@@ -146,6 +150,7 @@
 # 5. Test it - the menu should repeat until you type "3"
 #
 # Write your code (modify your Task 3 code):
+
 
 
 
@@ -222,7 +227,6 @@
 
 
 
-
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
 # -------------------------------------------
@@ -257,9 +261,6 @@
 #
 # Write your code (add to your choice == "1" section):
 
-
-
-
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
 # -------------------------------------------
@@ -292,6 +293,7 @@
 # 3. Test by adding a few tasks
 #
 # Write your code (add to your choice == "1" section):
+
 
 
 
@@ -333,6 +335,53 @@
 # 2. Test by adding some tasks, then viewing them
 #
 # Write your code (add after your choice == "1" section):
+choice = "0"
+while choice != "3":
+    while choice !="1" and choice !="2" and choice !="3":
+        print("ERROR: Invaild Choice")
+        print()
+        print("1. Add task")
+        print("2. view all tasks")
+        print("3. Exit")
+        print()
+        choice = input("Select an option: ")
+        if choice == "1":
+            task = {
+                "name": task_name,
+                "priority": priority,
+                "status": "Not started"
+            }
+            tasks.append(task)    
+        elif choice == "2":
+            if len(tasks) == 0:
+                print("No tasks recorded yet")
+                print()
+            else:
+                print("All tasks:")
+                print()
+                for task in tasks:
+                    print(f"Name: {task['name']}")
+                    print(f"Priority: {task['priority']}")
+                    print(f"Status: {task['status']}")
+                    print("---------------------------------------")
+                print()
+                task_name = input("Enter task name: ")
+                priority = input("Enter priority (High/Medium/Low): ")
+                while task_name == "":
+                    print("ERROR: Task Name cannot be blank")
+                    task_name = input("Enter task name:")    
+                while priority == "":
+                    print("ERROR: Priority cannot be blank")
+                    priority = input("Enter priority (High/Medium/Low): ")
+                print()
+            task = {
+                "name": task_name,
+                "priority": priority,
+                "status": "Not started"
+            }
+            tasks.append(task)
+            print("Task added successfully")
+            print()
 
 
 
