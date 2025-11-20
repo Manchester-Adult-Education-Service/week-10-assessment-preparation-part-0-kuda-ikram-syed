@@ -115,12 +115,15 @@ print()
 # Write your code below:
 choice = "0"
 while choice != "3":
-    print("1. Add task")
-    print("2. view all tasks")
-    print("3. Exit")
-    print()
-    choice = input("Select an option: ")
-    print()
+    while choice !="1" and choice !="2" and choice !="3":
+        print("ERROR: Invaild Choice")
+        print()
+        print("1. Add task")
+        print("2. view all tasks")
+        print("3. Exit")
+        print()
+        choice = input("Select an option: ")
+
  
 
 
