@@ -113,16 +113,6 @@ print()
 # 5. Print what they chose: print(f"You selected: {choice}")
 #
 # Write your code below:
-choice = "0"
-while choice != "3":
-    while choice !="1" and choice !="2" and choice !="3":
-        print("ERROR: Invaild Choice")
-        print()
-        print("1. Add task")
-        print("2. view all tasks")
-        print("3. Exit")
-        print()
-        choice = input("Select an option: ")
 
  
 
@@ -234,8 +224,22 @@ while choice != "3":
 # 2. Test option 1 - it should ask for input and confirm
 #
 # Write your code (add to your while loop):
-
-
+choice = "0"
+while choice != "3":
+    while choice !="1" and choice !="2" and choice !="3":
+        print("ERROR: Invaild Choice")
+        print()
+        print("1. Add task")
+        print("2. view all tasks")
+        print("3. Exit")
+        print()
+        choice = input("Select an option: ")
+        if choice == "1":
+            task_name = input("Enter task name: ")        
+            priority = input("Enter priority (High/Medium/Low): ")
+            print()
+            print("Task added successfully")
+            print()
 
 
 # -------------------------------------------
